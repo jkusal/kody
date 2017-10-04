@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <!--
    plan.html
    
@@ -24,13 +24,70 @@
 -->
 
 <head>
-<meta charset="utf-8" />
-<title>bez nazwy</title>
-<meta name="generator" content="Geany 1.29" />
+  <meta charset="utf-8" />
+    <title>bez nazwy</title>
+  <meta name="generator" content="Geany 1.29" />
 </head>
 
 <body>
-
+    <div>
+        <a href="index.html">Strona główna</a>
+        <a href="listy.html">Listy</a>
+        <a href="plan.html">Plan</a>
+    </div>
+    
+<h1>Plan lekcji</h1>
+<h2>Klasa 1A</h2>
+<p>To jest główny tekst na stronie.<br> 
+   Dziś zrobimy ładny tabelkowy plan lekcji :)</p>
+   <p>Zaraz poznamy znaczniki tworzące tabelę :)</p>
+   
+   <table border="2" cellpadding="3" cellspacing="4" width="80%">
+       <caption>Plan lekcji 1A</caption>
+       <thead>
+         <tr>
+                 <th>Nr.</th>
+                 <th>Godz.</th>
+                 <th>Poniedziałek</th>
+                 <th>Wtorek</th>
+                 <th>Sroda</th>
+                 <th>Czwartek</th>
+                 <th>Piątek</th>    
+         </tr>
+     </thead>
+     <tfoot>
+        <tr>
+           <td colspan="5">To jest stopka tabeli</td>
+           <td colspan="2">Dwie kolumny</td>
+        </tr>
+     </tfoot>
+     <tbody>
+           <tr>
+             <td>1</td>
+             <td>7.10-7.55</td>
+             <td align="center">fizyka</td>
+             <td>wos</td>
+             <td>informatyka</td>
+             <td>religia</td>
+             <td>j.polski</td>
+         </tr>
+     </tbody>
+   </table>
+   <table border="2" cellpadding="3" cellspacing="4" width="80%">
+       <caption>Łączenie komórek i wierszy</caption>
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td rowspan="2">3</td>
+        </tr>
+        <tr>
+          <td rowspan="2" valign="top" align="center">4</td>
+          <td>5</td>
+        </tr>
+        <tr>
+            <td colspan="2">6</td>
+        </tr>
+   </table>
 </body>
 
 </html>
