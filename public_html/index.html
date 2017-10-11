@@ -26,26 +26,33 @@
 <head>
     <meta charset="utf-8" />
     <title>Pierwsza strona w HTML</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
-    <div>
-        <a href="index.html">Strona główna</a>
-        <a href="listy.html">Listy</a>
-        <a href="plan.html">Plan</a>
+    <div id="menu"> 
+        <a class="menu"href="index.html">Strona główna</a>
+        <a class="menu"href="listy.html">Listy</a>
+        <a class="menu"href="plan.html">Plan</a>
+        <a class="menu"href="specjalne/klasa1a.html">Klasa 1a</a>
     </div>
+    <div id="tresc">
+        <h1>Nagłówek 1</h1>
+        <h2>Ulubione obrazy</h2>
+        <div>
+            <img src="https://pomagam.wwf.pl/wp-content/uploads/2014/09/share_tygrys.jpg">
+            <a href="https://pomagam.wwf.pl/wp-content/uploads/2014/09/share_tygrys.jpg">Tygrys</a>
+        </div>
+        <h3>Nagłówek 3</h3>
+        <h4>Nagłówek 4</h4>
+        <h6>
+            Nagłówek 6
+        </h6>
+    </div> <!-- /tresc -->
     
-    <h1>Nagłówek 1</h1>
-    <h2>Ulubione obrazy</h2>
-    <div>
-        <img src="https://pomagam.wwf.pl/wp-content/uploads/2014/09/share_tygrys.jpg">
-        <a href="https://pomagam.wwf.pl/wp-content/uploads/2014/09/share_tygrys.jpg">Tygrys</a>
+    <div id="stopka">
+        <p>&copy; by Who Knows!</p>
     </div>
-    <h3>Nagłówek 3</h3>
-    <h4>Nagłówek 4</h4>
-    <h6>
-        Nagłówek 6
-    </h6>
 </body>
 
 </html>
