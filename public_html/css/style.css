@@ -1,3 +1,37 @@
 body {
+    font-family: arial, tahoma, verdana, serif;
+    font-size: 12pt;
+    line-height: 1.5em;
     background-color: lightgrey;
 }
+
+h1 {
+    font-size: 250%;
+    text-align: center;
+}
+
+h1, h2{
+    text-align: center;
+}
+
+.pochylony{
+    font-style: italic;
+}
+
+.pogrubiony{
+    font-weight: bold;
+}
+
+li{
+    font: italic bold 16px/24px gabriola;
+}
+
+.tekst1{
+    color: #7516ED;
+}
+
+.tekst2{
+    color: #2B7DED;
+}
+
+
