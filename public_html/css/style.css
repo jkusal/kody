@@ -5,6 +5,34 @@ body {
     background-color: lightgrey;
 }
 
+div#header{
+    border-color: green; 
+}
+
+#header img{
+    border-color: red;
+}
+
+.header img { 
+border: 8px solid yellow;
+}
+
+img {
+    border: 5px solid black;
+}
+
+#header{
+    padding-top: 50px;
+    border-top: 40px dashed blue;
+}
+
+.header{
+    padding: 20px;
+    border: 10px solid red;
+    margin: 15px;
+}
+
+
 h1 {
     font-size: 250%;
     text-align: center;
