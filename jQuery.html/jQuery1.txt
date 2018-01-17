@@ -1,0 +1,8 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-01-17T08:11:36+01:00
+
+====== jQuery1 ======
+Created środa 17 styczeń 2018
+
+https://etherpad.net/p/locgsan

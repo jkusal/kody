@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <p id="akapit1">a1</p>
+    <p id="akapit2">a2</p>
+    <p id="akapit3">a3</p>
+
+    <label for="kod1">Pole 1</label>
+    <input id="kod1" type="text" name="kod1" value=""><br>
+    <label for="kod2">Pole 2</label>
+    <input id="kod2" type="text" name="kod2" value=""><br>
+    <label for="kod3">Pole 3</label>
+    <input id="kod3" type="text" name="kod3" value="">
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(() => {
+//napisz kod, który po najeczaniu na pole tekstowe wyświetla jego zawartośc
+//w odpowiednim akapicie
+
+  //$('#kod1').mouseover(function() {
+  //  $('#akapit1').text($(this).val());
+//  });
+
+$('#kod1').on({
+  static akapit1
+  mouseover: function(){
+    $('akapit1')
+  }
+});
+
+  $('#kod2').mouseover(() => {
+    $('#akapit2').text($('#kod2').val());
+  });
+
+  $('#kod3').mouseover(() => {
+    $('#akapit3').text($('#kod3').val());
+  });
+
+      });
+    </script>
+  </body>
+</html>

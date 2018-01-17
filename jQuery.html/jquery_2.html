@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <p id="akapit1">Jakiś przykładowy tekst</p>
+    <p id="akapit2">Jakiś <em>przykładowy tekst</em></p>
+
+    <input id="input1" type="text" name="imie" value="Imię">
+
+    <p id="akapit3"> <a href="http://lo1.sandomierz.pl" id="link1">I LO Sandomierz</a></p>
+
+    <br>
+    <button id="btn1" type="button" name="btn1">Pokaż tekst</button>
+    <button id="btn2" type="button" name="btn2">Pokaż HTML</button>
+    <button id="btn3" type="button" name="btn3">Pokaż wartość</button>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(() => {
+
+        $('#btn1').click(() => {
+          alert($('#akapit1').text());
+          $('#akapit1').text('Nowy tekst');
+        });
+
+        $('#btn2').click(() => {
+          alert($('#akapit2').html());
+          $('#akapit2').html('Imię i <span class="label label-success">nazwisko</span>')
+        });
+
+        $('#btn3').click(() => {
+          alert($('#input1').val());
+          $('#input1').val('Imię i nazwisko');
+        });
+
+        $('#akapit3').mouseover(function() {
+          document.location = $('#link1').attr('href');
+        });
+
+      });
+    </script>
+  </body>
+</html>
