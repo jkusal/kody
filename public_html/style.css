@@ -25,3 +25,10 @@ body {
   background-position: center;
   background-size: cover;
 }
+.gallery {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
