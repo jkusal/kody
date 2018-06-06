@@ -20,14 +20,14 @@ def main(args):
             liczby.append(liczba)
     print(liczby)
 
-        # odp = input("Podaj liczbę od 1 do 10: ")
-        # print("Podaleś liczbę:", odp)
+            # odp = input("Podaj liczbę od 1 do 10: ")
+            # print("Podaleś liczbę:", odp)
 
-        # if liczba == int(odp):
-        #     print("Zgadłeś!")
-        #     break  # przerwanie dzialania pętli
-        # else:
-        #     print("Spróbuj jeszcze raz!")
+            # if liczba == int(odp):
+            #     print("Zgadłeś!")
+            #     break  # przerwanie dzialania pętli
+            # else:
+            #     print("Spróbuj jeszcze raz!")
 
     return 0
 
