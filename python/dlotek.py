@@ -14,10 +14,13 @@ def main(args):
     # print("Wylosowano:", liczba)
     # losowanie liczb
     liczby = []  # lista wylosowanych liczb
-    for i in range(ileliczb):
+    i = 0
+    # for i in range(ileliczb):
+    while i < ileliczb:
         liczba = random.randint(1, maksliczba)
         if liczby.count(liczba) == 0:
             liczby.append(liczba)
+            i += 1
     print(liczby)
 
             # odp = input("Podaj liczbę od 1 do 10: ")
