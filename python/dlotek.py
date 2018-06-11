@@ -23,14 +23,14 @@ def main(args):
             i += 1
     print(liczby)
 
-            # odp = input("Podaj liczbę od 1 do 10: ")
-            # print("Podaleś liczbę:", odp)
-
-            # if liczba == int(odp):
-            #     print("Zgadłeś!")
-            #     break  # przerwanie dzialania pętli
-            # else:
-            #     print("Spróbuj jeszcze raz!")
+    typy = set()  # deklaracja pustego zbioruna typy użytkownika
+    i = 0
+    while i < ileliczb:
+        typ = input("Podaj liczbę {}: ".format(i + 1))
+        if typ not in typy:
+            typy.add(typ)
+            i += 1
+    print(typy)
 
     return 0
 
@@ -38,3 +38,6 @@ def main(args):
 if __name__ == '__main__':
     import sys
     sys.exit(main(sys.argv))
+
+
+   # lista przechowuje podane wartości
