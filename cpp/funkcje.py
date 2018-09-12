@@ -23,6 +23,20 @@
 #  duck typing jeżeli coś wygląda jak kaczka musi być kaczką
 #  wszystko pobrane z wejścia jest znakiem
 
+#  zasięg zmiennych: lokalny(ograniczony funkcją)  
+
+
+def suma(a, b):
+    return a + b
+    
+def roznica(a, b):
+    return a - b
+    
+def iloczyn(a, b):
+    return a * b
+    
+def iloraz(a, b):
+    return a / b
 
 def main(args):
     a = int(input("Podaj liczbę: "))
@@ -31,11 +45,13 @@ def main(args):
     b = int(input("Podaj drugą liczbę: "))
     print(b)
     
-    print("Suma: ", a + b)
+    print("Suma: ", suma(a, b))
     
-    print("Iloczyn: ", a * b)
+    print("Różnica: ", roznica(a, b))
     
-    print("Iloraz: ", a / b)
+    print("Iloczyn: ", iloczyn(a, b))
+    
+    print("Iloraz: ", iloraz(a, b))
     
     return 0
 
