@@ -1,0 +1,66 @@
+body{
+	background-color:#ffffff;
+	color:#000000;
+	font:25px verdana,sans-serif;
+	overflow:auto;
+	margin:0}
+.tabtytul{ /* tabelka z grafik¹ (nag³ówek) */
+	background-color:#D72828;
+	border-bottom:2px solid #808080}
+.tytul{ /* komórka z tytu³em */
+	background-color:#D72828;
+	color:#ffffff;
+	height:80px;
+	font:bold 36px verdana,sans-serif;
+	border-bottom:2px solid #c0c0c0;
+    margin-bottom:50px;
+	text-align:center}
+.tytulnapis{ /* tytu³ strony z cieniem (tylko IE) */
+	padding-left:10px;width:400px;height:60px;filter:Shadow(Color=#000000,Direction=150)}
+.tabela{ /* tabela z planem */
+	border-color:#333;
+    margin-top: 22px}
+td{
+	font-size:11px}
+th{
+	background-color:#D72828;
+	color:white;
+	font-size:25px}
+td.g{ /* godzina */
+	background-color:#dedede;
+	color:#333;
+	font-weight:bold;
+	vertical-align:top;
+	text-align:center;
+	white-space:nowrap;
+    text-decoration: underline;}
+td.nr{ /* numer lekcji */
+	background-color: black;
+	color:white;
+    font-size: 15px;
+	text-align:center;
+	vertical-align:top;
+    font-weight: bold;
+    text-decoration: italic;}
+td.l{ /* lekcja */
+	background-color:white;
+    font-size: 20px;
+	vertical-align:top}
+a.n{ /* nauczyciel */
+	color:#000099}
+a.s{ /* sala */
+	color:#000099}
+a.k{ /* klasa */
+	color:#000099}
+.p{ /* przedmiot */
+	color:#333;
+	font-weight:bold}
+.op{ /* napis */
+	font:10px verdana,sans-serif}
+@media print{
+.tabtytul{ /* nag³ówek do druku */
+	display:none}
+}
+.trtd {
+    font: 'Open Sans', sans-serif;
+    color:white;}
