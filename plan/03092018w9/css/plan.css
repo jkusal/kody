@@ -1,30 +1,18 @@
 body{
 	background-color:#ffffff;
 	color:#000000;
-<<<<<<< HEAD
 	font:25px verdana,sans-serif;
 	overflow:auto;
 	margin:0}
 .tabtytul{ /* tabelka z grafik¹ (nag³ówek) */
-	background-color:#D72828;
+	background-color:#80c2ab;
 	border-bottom:2px solid #808080}
 .tytul{ /* komórka z tytu³em */
-	background-color:#D72828;
-=======
-	font-family:sans-serif;
-	overflow:auto;
-	margin:0}
-.tabtytul{ /* tabelka z grafik� (nag��wek) */
-	background-color:#80c2ab;
-	border-bottom:2px solid #808080}
-.tytul{ /* kom�rka z tytu�em */
-	background-color:#80c2ab;
->>>>>>> 9de830c13c220ff050a11f1ca3fccf701744ae5f
+	background-color:#D82B2B;
 	color:#ffffff;
 	height:80px;
 	font:bold 36px verdana,sans-serif;
 	border-bottom:2px solid #c0c0c0;
-<<<<<<< HEAD
     margin-bottom:50px;
 	text-align:center}
 .tytulnapis{ /* tytu³ strony z cieniem (tylko IE) */
@@ -35,7 +23,7 @@ body{
 td{
 	font-size:11px}
 th{
-	background-color:#D72828;
+	background-color:#D82B2B;
 	color:white;
 	font-size:25px}
 td.g{ /* godzina */
@@ -47,7 +35,7 @@ td.g{ /* godzina */
 	white-space:nowrap;
     text-decoration: underline;}
 td.nr{ /* numer lekcji */
-	background-color: black;
+	background-color:black;
 	color:white;
     font-size: 15px;
 	text-align:center;
@@ -55,37 +43,8 @@ td.nr{ /* numer lekcji */
     font-weight: bold;
     text-decoration: italic;}
 td.l{ /* lekcja */
-	background-color:white;
+	background-color: white;
     font-size: 20px;
-=======
-	text-align:center}
-.tytulnapis{ /* tytu� strony z cieniem (tylko IE) */
-	padding-left:10px;width:400px;height:60px;filter:Shadow(Color=#666666,Direction=150)}
-.table{ /* tabela z planem */
-	border-color:#c0c0c0}
-td{
-	font-size:11px}
-th{
-	background-color:#bddfd0;
-	color:#000099;
-	font-size:13px}
-td.g{ /* godzina */
-	background-color:#eaf4f0;
-	color:#000099;
-	font-weight:bold;
-	vertical-align:top;
-	text-align:center;
-	white-space:nowrap}
-td.nr{ /* numer lekcji */
-	background-color:#bddfd0;
-	color:#000099;
-	font-weight:bold;
-	text-align:center;
-	vertical-align:top}
-td.l{ /* lekcja */
-	background-color:#ffffff;
-	color:#000000;
->>>>>>> 9de830c13c220ff050a11f1ca3fccf701744ae5f
 	vertical-align:top}
 a.n{ /* nauczyciel */
 	color:#000099}
@@ -94,24 +53,15 @@ a.s{ /* sala */
 a.k{ /* klasa */
 	color:#000099}
 .p{ /* przedmiot */
-<<<<<<< HEAD
 	color:#333;
-=======
-	color:#000000;
->>>>>>> 9de830c13c220ff050a11f1ca3fccf701744ae5f
 	font-weight:bold}
 .op{ /* napis */
 	font:10px verdana,sans-serif}
 @media print{
-<<<<<<< HEAD
 .tabtytul{ /* nag³ówek do druku */
 	display:none}
 }
 .trtd {
     font: 'Open Sans', sans-serif;
-    color:white;}
-=======
-.tabtytul{ /* nag��wek do druku */
-	display:none}
-}
->>>>>>> 9de830c13c220ff050a11f1ca3fccf701744ae5f
+    color:white;
+    }
