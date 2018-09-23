@@ -2,6 +2,7 @@
 #Program pobiera 3 liczby od użytkownika , a następnie wyświetla największą
 #
 def maks(a, b, c):
+<<<<<<< HEAD
     m=None
     
     if a >= b & a >= c:
@@ -12,6 +13,26 @@ def maks(a, b, c):
         print(c, "jest największe")
         
     return m;
+=======
+    if a > b:
+        if a > c:
+            m = a
+        else:
+			m = c 
+    elif b > c:
+            m = b
+    print("Największa:", m)
+    
+return m
+    
+def maks2(a, b, c):
+    m = a
+    if b > m:
+        m = b
+    if c > m:
+        m = c
+    return m
+>>>>>>> 9de830c13c220ff050a11f1ca3fccf701744ae5f
 
 
 
