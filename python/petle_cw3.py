@@ -7,9 +7,8 @@ def main(args):
     while a < 0:
         a = int(input("Podaj liczbę większą od 0: "))
         
-    for liczba in range(0, a):
-            if not liczba % 2 == 0:
-                print(liczba ^ 2)
+    for liczba in range(0, a + 1):
+        print(liczba * liczba)
     
     return 0
 

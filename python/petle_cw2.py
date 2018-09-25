@@ -4,21 +4,16 @@
 
 
 def main(args):
-    a = int(input("Od: "))
+    a = int(input("Podaj liczbę: ")) 
+    b = int(input("Podaj liczbę: "))
     
-    b = int(input("Do: "))
     while a >= b:
         b = int(input("Podaj większą liczbę niż pierwsza! Liczba 2: "))
-        
-    while a < 0:
-        a = int(input("Podaj liczbę większą od 0: "))
-        
-    while b < 0:
-        b = int(input("Podaj liczbę większą od 0: "))
-        
-        for liczba in range(a, b):
-            if liczba a + b = suma
-            print(suma)
+		
+    
+    if a <= b:
+        for liczba in range(a, b + 1):
+                print(liczba, end = " ")
         
     return 0
 
