@@ -6,14 +6,12 @@ def suma(a, b):
 
 
 def main(args):
-    a = int(input("Podaj liczbę a: "))
-    b = int(input("Podaj liczbę b: "))
-    while a + b > 75:
-        suma(a, b) = int(input("Suma większa niż 75."))
+    suma = 0
+    while suma <= 75:
+        liczba = int(input("Podaj liczbę: "))
+        suma = liczba + suma
         
-    for liczba in range(a, b):
-        print("Suma: ", suma(a, b))
-    
+    print("Suma: ", suma)
     return 0
 
 if __name__ == '__main__':
