@@ -37,7 +37,7 @@ CREATE TABLE oceny
     Informatyka INTEGER,
     Plastyka INTEGER,
     PO INTEGER,
-    W-F INTEGER,
+    W-F TEXT,
     id_ucznia INTEGER,
 	FOREIGN KEY (id_ucznia) REFERENCES nazwiska(id_ucznia)
 );
