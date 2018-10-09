@@ -5,15 +5,20 @@
 
 def main(args):
     
-    a = int(input("Podaj bok a: ")) 
-    i = 0
+    a = int(input("Podaj wysokość choinki: "))
+    b = 0
+    znak = input("Podaj znak, którym chcesz rysować: ")
     
-    while i < a:
-        a = a - 1
-        print("*", end='')
-        
+    while b<a :
+        c = b + 1
+        while c > 0:
+            print(znak, end = '')
+            c = c - 1
+        b = b + 1
+        print()
+    
     return 0
 
 if __name__ == '__main__':
     import sys
-    sys.exit(main(sys.argv))
+sys.exit(main(sys.argv))
