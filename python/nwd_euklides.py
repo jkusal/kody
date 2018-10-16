@@ -3,14 +3,12 @@
   
 def NWD_klasyczny(a, b):
     
-    while a == b:
-        return a
-    while a > b:
-        a = a - b
+    while a != b:
+        if a > b:
+            a -= b
         else:
-            a = b - a
-    
-    return nwd
+            b -= a
+    return a
     
 def main(args):
     a = int(input("Podaj liczbę a: "))
