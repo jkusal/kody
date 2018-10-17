@@ -31,7 +31,7 @@ def liczby3(a=100, b=999):
     for i in range(1, 10):
         for j in range(0, 10):
             for k in range(0.10):
-                if i != j and i != k and j != k:
+                if i != j & i != k & j != k:
                     print("{}{} ".format(i,j,k), end='')
                     ile += 1
     return ile
