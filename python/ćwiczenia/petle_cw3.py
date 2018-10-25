@@ -3,12 +3,14 @@
 
 
 def main(args):
-    a = int(input("Podaj liczbę: "))
-    while a < 0:
-        a = int(input("Podaj liczbę większą od 0: "))
-        
+    
+    iloczyn = 0
+    
+    a = int(input("Podaj liczbę końcową zakresu: "))
+    
     for liczba in range(0, a + 1):
-        print(liczba * liczba)
+		iloczyn = liczba * liczba
+		print(iloczyn)
     
     return 0
 
