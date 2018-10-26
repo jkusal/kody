@@ -40,5 +40,6 @@ CREATE TABLE oceny
     id_uczen INTEGER,
     id_przedmiot INTEGER,
     ocena DECIMAL,
-    FOREIGN KEY (id) REFERENCES uczniowie(id)
+    FOREIGN KEY (id_uczen) REFERENCES uczniowie(id)
+    FOREIGN KEY (id_przedmiot) REFERENCES przedmioty(id)
 );
