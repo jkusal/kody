@@ -33,8 +33,8 @@ int main(int argc, char **argv)
     for (int i = 0; i <= n; i++) {
         cout << vibo_it(i) << endl;
     }
-    int 
-    cout << (n -1)/(n - 2);
+    
+    cout << vibo_it(n -1)/vibo_it(n - 2);
     
     
 	return 0;
