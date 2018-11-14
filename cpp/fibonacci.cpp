@@ -34,7 +34,7 @@ int main(int argc, char **argv)
         cout << vibo_it(i) << endl;
     }
     
-    cout << vibo_it(n -1)/vibo_it(n - 2);
+    cout << "Złota liczba: " << vibo_it(n -1)/vibo_it(n - 2);
     
     
 	return 0;
