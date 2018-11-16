@@ -22,7 +22,7 @@ class Uczen(BazaModel):
     imie = CharField()
     nazwisko = CharField()
     plec = BooleanField()
-    klasa = ForeignKeyField(Klasa, related_name='numer')
+    klasa = ForeignKeyField(Klasa, related_name='uczniowie')
     egzhum = FloatField(default=0)
     egzmat = FloatField(default=0)
     egzjez = FloatField(default=0)
@@ -37,8 +37,8 @@ class Przedmiot(BazaModel):
 
 class Ocena(BazaModel):
     datad = DateField()
-    uczen = ForeignKeyField(Uczen, related_name='wyniki')
-    przedmiot = ForeignKeyField(Przedmiot, related_name='coś')
+    uczen = ForeignKeyField(Uczen, related_name='oceny')
+    przedmiot = ForeignKeyField(Przedmiot, related_name='oceny')
     ocena = IntegerField()
 
 def main(args):

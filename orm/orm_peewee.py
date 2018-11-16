@@ -33,10 +33,29 @@ class Wynik(BazaModel):
     
 
 def main(args):
-    if os.path_exists(baza_plik):
+    if os.path.exists(baza_plik):
         os.remove(baza_plik)
     baza.connect() # połączeie z bazą
     baza.create_tables([Klasa, Uczen, Wynik])
+        
+    kl2A = Klasa(nazwa="2A", roknaboru=2010, rokmatury=2013)
+    kl2A.save()
+    
+    u1 = Uczen(imie="Jarosław", nazwisko="Maly", plec=False, klasa=kl2A)
+    u1.save()
+    
+    kl1A = Klasa(nazwa="1A", roknaboru=2009, rokmatury=2012)
+    kl1A.save()
+    
+    u2 = Uczen(imie="Anna", nazwisko="Gacek", plec=True, klasa=kl1A)
+    u2.save()
+    
+    u3 = Uczen(imie="Roman", nazwisko="Polek", plec=False, klasa=kl1A)
+    u3.save()
+    
+    uczniowie = Uczen.select()
+    for uczen in uczniowie:
+        print(uczen.id, uczen.nazwisko, uczen.klasa.nazwa)
         
     return 0
 
