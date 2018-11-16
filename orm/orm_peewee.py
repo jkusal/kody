@@ -33,7 +33,7 @@ class Wynik(BazaModel):
     
 
 def main(args):
-    if.os.path_exists(baza_plik):
+    if os.path_exists(baza_plik):
         os.remove(baza_plik)
     baza.connect() # połączeie z bazą
     baza.create_tables([Klasa, Uczen, Wynik])
