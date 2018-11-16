@@ -13,20 +13,20 @@ class BazaModel(Model):
     class Meta:
         database = baza
 
-class Uczen(BazaModel):
-    imie = CharField()
-    nazwisko = CharField()
-    plec = BooleanField()
-    id_klasa = IntegerField()
-    egzhum = FloatField(default=0)
-    egzmat = FloatField(default=0)
-    egzjez = FloatField(default=0)
-    
-        
 class Klasa(BazaModel):
     klasa = CharField()
     rok_naboru = DateField()
     rok_matury = DateField()
+
+class Uczen(BazaModel):
+    imie = CharField()
+    nazwisko = CharField()
+    plec = BooleanField()
+    klasa = ForeignKeyField(Klasa, related_name='numer')
+    egzhum = FloatField(default=0)
+    egzmat = FloatField(default=0)
+    egzjez = FloatField(default=0)
+    
     
 class Przedmiot(BazaModel):
     przedmiot = CharField()
