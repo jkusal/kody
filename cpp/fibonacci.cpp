@@ -24,7 +24,7 @@ int vibo_it(int n) {
 
 int main(int argc, char **argv)
 {
-	int n;
+	float n;
     cout << "Podaj numer wyrazu ciągu: ";
     cin >> n;
     cout << "Ciąg Fibonacciego do wyrazu " << n << ": ";
