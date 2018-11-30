@@ -3,12 +3,19 @@
 
 import os  
 from modele import *
+from baza import dane_z_pliku
 
 def dodaj_dane(dane):
     for model, plik in dane.items():
-        print(plik)
+        pola = [pole for pole in model._meta.fields]
+        pola.pop(0)
         
-        model.insert_many()
+        wpisy = dane_z_pliku(plik + '.csv')
+        print(wpisy)
+        
+        model.insert_many(wpisy, fields=pola).execute()
+        
+
 
 def main(args):
     if os.path.exists(baza_plik):
