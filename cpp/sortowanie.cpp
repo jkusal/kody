@@ -40,9 +40,9 @@ void zamien(int tab[], int i)
     tab[i+1] = tmp;
 }
 
-void sortowanie_babelkowe+(int tab[],int n)
+void sortowanie_babelkowe(int tab[],int n)
 {
-    cout << "\nSortowanie bąbelkowe+" << endl;
+    cout << "\nSortowanie bąbelkowe\n" << endl;
     int licz = 0;
     for(int j = n - 1; j > 0; j--)
     {
@@ -59,19 +59,18 @@ void sortowanie_babelkowe+(int tab[],int n)
     cout << "Powtórzenia: " << licz << endl;
 }
 
-void sortowanie_babelkowe-(int tab[],int n)
+void sort_insert(int tab[],int n)
 {
-    cout << "\nSortowanie bąbelkowe+" << endl;
-    int licz = 0;
-    for(int j = 0; j < n; j++)
+    cout << "\nSortowanie Przez wstawianie\n" << endl;
+    int i, j, el;
+    for(j = 1; j < n; j++)
     {
-        for(int i = 0; i <  j; i--) //pętla wewnętrzna
+        el = tab[i];
+        i = j - 1;
+        while(i >= 0 && tab[i] > el) //pętla wewnętrzna
         {
-            licz++;
-            if(tab[i] > tab[i+1])
-            {
-                //zamiana miejscami
-                zamien(tab, i);
+            tab[i+1] = tab[i];
+            j--
             }
         }
     }
@@ -85,10 +84,10 @@ int main(int argc, char **argv)
     los(tablica, rozmiar);
     drukuj(tablica, rozmiar);
     cout << endl;
-    sortowanie_babelkowe+(tablica, rozmiar);
+    sortowanie_babelkowe(tablica, rozmiar);
     drukuj(tablica, rozmiar);
-    sortowanie_babelkowe-(tablica, rozmiar);
-    drukuj(tablica, rozmiar);
+    //sortowanie_babelkowe-(tablica, rozmiar);
+    //drukuj(tablica, rozmiar);
     
     return 0;
 }
