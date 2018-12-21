@@ -32,6 +32,9 @@
 <body>
     <h1>Quiz</h1>
     <h2>Pytania</h2>
+    
+    <form method='POST'>
+    
     {% for p in query %}
     <p>
         {{ p.id }} {{ p.pytanie }}
@@ -45,6 +48,9 @@
         
     </p>
     {% endfor %}
+    
+    <input type="submit" value="Zapisz odpowiedzi">
+    </form>
 </body>
 
 </html>

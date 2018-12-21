@@ -28,6 +28,7 @@
 <title>Quiz - pytania bez ściemy</title>
     <style type="text/css">
         #menu li { display:  }
+        .info { color: blue }
     </style>
 </head>
 
@@ -41,6 +42,17 @@
     </ul>
     
     <h1>Quiz dla odważnych</h1>
+    
+    <div id="komunikaty">
+        {% with komunikaty = get_flashed_messages(with_categories=true) %}
+        {% if komunikaty %}
+            {% for kategoria, komunikat in komunikaty %}
+            <p class="{{ kategoria }}">{{ komunikat }}</p>
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
+    </div>
+    
 </body>
 
 </html>
