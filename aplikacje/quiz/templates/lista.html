@@ -35,14 +35,6 @@
     {% for p in query %}
     <p>
         {{ p.id }} {{ p.pytanie }}
-        <br>
-        {% for o in p.odpowiedzi %}
-        
-        <input type="radio" name="{{ p.id }}" value="{{ o.id }}">
-        {{ o.odpowiedz }}
-        <br>
-        {{ endfor }}
-        
     </p>
     {% endfor %}
 </body>
