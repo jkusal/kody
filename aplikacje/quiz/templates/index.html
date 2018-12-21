@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <!--
-   strona.html
+   index.html
    
    Copyright 2018  <>
    
@@ -25,26 +25,22 @@
 
 <head>
 <meta charset="utf-8" />
-<title>Moja strona</title>
-<meta name="generator" content="Geany 1.32" />
+<title>Quiz - pytania bez ściemy</title>
+    <style type="text/css">
+        #menu li { display:  }
+    </style>
 </head>
 
 <body>
-    <h1>Quiz</h1>
-    <h2>Pytania</h2>
-    {% for p in query %}
-    <p>
-        {{ p.id }} {{ p.pytanie }}
-        <br>
-        {% for o in p.odpowiedzi %}
-        
-        <input type="radio" name="{{ p.id }}" value="{{ o.id }}">
-        {{ o.odpowiedz }}
-        <br>
-        {% endfor %}
-        
-    </p>
-    {% endfor %}
+    <ul>
+        <li><a href="{{ url_for('index') }}">Strona główna</a></li>
+        <li><a href="{{ url_for('lista') }}">Lista pytań</a></li>
+        <li><a href="{{ url_for('quiz') }}">Quiz</a></li>
+        <li><a href="#">Dodaj pytanie</a></li>
+       
+    </ul>
+    
+    <h1>Quiz dla odważnych</h1>
 </body>
 
 </html>

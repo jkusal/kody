@@ -22,8 +22,8 @@ def after_request(response):
     return response
     
 @app.route("/")
-def hello():
-    return "<h1>Witaj na serwerze!</h2><h2>Aplikacja quiz</h2>"
+def index():
+    return render_template('index.html')
     
 @app.route("/lista")
 def lista():
