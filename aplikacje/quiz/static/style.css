@@ -1,9 +1,2 @@
-body {
-    color: black;
-    background-color: lightgrey;
-}
-#menu li { 
-    display:  
-    .info color: blue 
-    
-}
+#menu li { display: inline; }
+.info { color: blue; font-weight: bold; }
