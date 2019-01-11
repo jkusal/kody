@@ -1,2 +1,5 @@
 #menu li { display: inline; }
 .info { color: blue; font-weight: bold; }
+section {
+    padding: 90px 0;
+}
