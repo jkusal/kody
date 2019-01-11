@@ -4,9 +4,13 @@
 {% block tresc %}
     
     <form method='POST'>
-    {{ form.csrf_token }}
+    {{ form.pytanie.label }}
+    {{ form.pytanie }}
+    <br>
     
-    {{ form.id }}
+    {{ form.kategoria.label }}<br>
+    {{ form.kategoria(class="form-control") }}<br>
+    <br>
     {{ form.pytanie }}
     {{ form.odpowiedz }}
     {{ form.odpok }}
