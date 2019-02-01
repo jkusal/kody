@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 
   <head>
 
@@ -11,12 +11,11 @@
     <title>{% block tytul %}{% endblock %}</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="{{ url_for('static', filename='css/scrolling-nav.css')}}" rel="stylesheet">
-
-    <link href="{{ url_for('static', filename='css/style.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/scrolling-nav.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
 
   </head>
 
@@ -38,7 +37,7 @@
               <a class="nav-link js-scroll-trigger" href="{{ url_for('quiz') }}">Quiz</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="{{ url_for('dodaj') }}">Dodaj pytanie</a>
+              <a class="nav-link js-scroll-trigger" href="{{ url_for('dodaj') }}">Dodaj</a>
             </li>
           </ul>
         </div>
@@ -48,14 +47,24 @@
     <header class="bg-primary text-white">
       <div class="container text-center">
         <h1>{% block h1 %}{% endblock %}</h1>
+        <p class="lead">Moja pierwsza aplikacja we Flasku</p>
       </div>
     </header>
 
-    <section id="about">
+    <section id="quiz">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto">
+            {% with komunikaty = get_flashed_messages(with_categories=true) %}
+            {% if komunikaty %}
+                {% for kat, kom in komunikaty %}
+                <p class="{{ kat }}">{{ kom }}</p>
+                {% endfor %}
+            {% endif %}
+            {% endwith %}
+
             {% block tresc %}
+            {% endblock %}
           </div>
         </div>
       </div>
@@ -64,22 +73,21 @@
     <!-- Footer -->
     <footer class="py-5 bg-dark">
       <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
       </div>
       <!-- /.container -->
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js')}}"></script>
-    <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="{{ url_for('static', filename='vendor/jquery-easing/jquery.easing.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='vendor/jquery-easing/jquery.easing.min.js') }}"></script>
 
     <!-- Custom JavaScript for this theme -->
-    <script src="{{ url_for('static', filename='js/scrolling-nav.js')}}"></script>
-    
-    {% endblock %}
+    <script src="{{ url_for('static', filename='js/scrolling-nav.js') }}"></script>
+
   </body>
 
 </html>

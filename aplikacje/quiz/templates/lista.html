@@ -1,11 +1,14 @@
 {% extends "szablon.html" %}
-{% block tytul %}Lista pytań{% endblock %}
-{% block h1 %}Quiz - lista pytań{% endblock %}
-{% block tresc %}
+{% block tytul %}Quiz – lista pytań{% endblock %}
+{% block h1 %}Quiz – lista pytań{% endblock %}
 
+{% block tresc %}
+<ol>
     {% for p in query %}
     <p>
         {{ p.id }} {{ p.pytanie }}
+        <a href="{{ url_for('edytuj', pid=p.id) }}" class="btn btn-Primary">Edytuj</a>
     </p>
     {% endfor %}
+</ol>
 {% endblock %}

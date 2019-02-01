@@ -1,15 +1,7 @@
 {% extends "szablon.html" %}
-{% block tytul %}Strona główna{% endblock %}
-{% block h1 %}Quiz{% endblock %}
-{% block tresc %}
+{% block tytul %}Quiz – pytania dla odważnych{% endblock %}
+{% block h1 %}Quiz – pytania dla odważnych{% endblock %}
 
-    <div id="komunikaty">
-        {% with komunikaty = get_flashed_messages(with_categories=true) %}
-        {% if komunikaty %}
-            {% for kategoria, komunikat in komunikaty %}
-            <p class="{{ kategoria }}">{{ komunikat }}</p>
-            {% endfor %}
-        {% endif %}
-        {% endwith %}
-    </div>
+{% block tresc %}
+<h2>Elo</h2>
 {% endblock %}

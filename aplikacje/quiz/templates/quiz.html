@@ -1,13 +1,13 @@
 {% extends "szablon.html" %}
-{% block tytul %}Quiz{% endblock %}
-{% block h1 %}Quiz{% endblock %}
+{% block tytul %}Quiz – odpowiedz na pytania{% endblock %}
+{% block h1 %}Quiz – odpowiedz na pytania{% endblock %}
+
 {% block tresc %}
-    
-    <form method='POST'>
-    
+    <form method="POST">
+
     {% for p in query %}
     <p>
-        {{ p.id }} {{ p.pytanie }}
+        {{ p.id }} {{ p.pytanie }}<br>
         <br>
         {% for o in p.odpowiedzi %}
         
@@ -15,10 +15,9 @@
         {{ o.odpowiedz }}
         <br>
         {% endfor %}
-        
+      
     </p>
     {% endfor %}
-    
     <input type="submit" value="Zapisz odpowiedzi">
     </form>
 {% endblock %}

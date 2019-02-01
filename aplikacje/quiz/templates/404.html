@@ -1,0 +1,12 @@
+{% extends "szablon.html" %}
+{% block tytul %}Quiz – Strony nie znaleziono{% endblock %}
+{% block h1 %}Quiz – błąd{% endblock %}
+
+{% block tresc %}
+<div class="alert">
+    <h2>Elo strony ni ma</h2>
+    <p>
+        <a href="{{ url_for('index')}}">Strona główna</a>
+    </p>
+</div>
+{% endblock %}

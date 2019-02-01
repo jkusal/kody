@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pl">
+<!-- szablon.html -->
+<head>
+    <meta charset="utf-8" />
+    <title>{% block tytul %}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <ul id="menu">
+        <li><a href="{{ url_for('index') }}">Strona główna</a></li>
+        <li><a href="{{ url_for('lista') }}">Lista pytań</a></li>
+        <li><a href="{{ url_for('quiz') }}">Quiz</a></li>
+        <li><a href="#">Dodaj pytanie</a></li>
+    </ul>
+    
+    <h1>{% block h1 %}{% endblock %}</h1>
+    
+    {% block tresc %}
+    {% endblock %}
+</body>
+</html>

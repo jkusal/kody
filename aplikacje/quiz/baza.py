@@ -18,14 +18,14 @@ def dane_z_pliku(nazwa_pliku, separator=','):
         tresc = csv.reader(plik, delimiter=separator)
         for rekord in tresc:
             rekord = [x.strip() for x in rekord]  # oczyszczamy dane
-            dane.append(rekord)  # dodawanie rekordĂłw do listy
+            dane.append(rekord)  # dodawanie rekordów do listy
     return dane
 
 def dodaj_dane(dane):
     
     for model, plik in dane.items():
         pola = [pole for pole in model._meta.fields]
-        pola.pop(0)  # usuniÄcie klucza gĹĂłwnego
+        pola.pop(0)  # usunięcie klucza głównego
 
         wpisy = dane_z_pliku(plik + '.csv', ';')
         model.insert_many(wpisy, fields=pola).execute()
