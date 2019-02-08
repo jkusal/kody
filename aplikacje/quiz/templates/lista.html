@@ -8,6 +8,7 @@
     <p>
         {{ p.id }} {{ p.pytanie }}
         <a href="{{ url_for('edytuj', pid=p.id) }}" class="btn btn-Primary">Edytuj</a>
+        <a href="{{ url_for('usun', pid=p.id) }}" class="btn btn-Primary">Usuń</a>
     </p>
     {% endfor %}
 </ol>

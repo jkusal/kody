@@ -1,0 +1,13 @@
+{% extends "szablon.html" %}
+{% block tytul %}Quiz – dodaj pytanie{% endblock %}
+{% block h1 %}Quiz – dodaj pytanie{% endblock %}
+
+{% block tresc %}
+    <form method="POST" action="{{ url_for('usun', pid=pytanie.id) }}"> 
+    
+        <p class="lead">Czy na pewno chcesz usunąć pytanie:</p>
+        <p>{{ pytanie.pytanie }}</p>
+    
+        <input type="submit" value="Usuń pytanie">
+    </form>
+{% endblock %}

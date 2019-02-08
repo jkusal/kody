@@ -81,13 +81,39 @@ def page_not_found(e):
 def edytuj(pid):
     p = get_or_404(pid)
     
-    form = PytanieForm()
+    form = PytanieForm(obj=p)
     form.kategoria.choices = [(k.id, k.kategoria) for k in Kategoria.select()]
-    
+    form.kategoria.data = p.kategoria.id
     if form.validate_on_submit():
         print(form.data)
-        
-        
-        
+        p.pytanie = form.pytanie.data
+        p.kategoria = form.kategoria.data
+        p.save()
+        for o in form.odpowiedzi.data:
+            odp = Odpowiedz.get_by_id(o['id'])
+            odp.odpowiedz=o['odpowiedz']
+            odp.odpok=int(o['odpok'])
+            odp.save()
+        flash("Zaktualizowano pytanie: {}".format(form.pytanie.data))
+        return redirect(url_for('lista'))
+    elif request.method == 'POST':
+        flash_errors(form)
+    
+    odpowiedzi = []
+    for o in Odpowiedz.select().where(Odpowiedz.pytanie == p.id).dicts():
+        odpowiedzi.append(o)
+    print (odpowiedzi)    
         
     return render_template("edytuj.html", form=form)
+
+@app.route("/usun/<int:pid>", methods=['GET', 'POST'])
+def usun(pid):
+    p = get_or_404(pid)
+    if request.method == 'POST':
+        flash('Usunięto pytanie {}'.format(p.pytanie), 'sukces')
+        for o in Odpowiedz.select().where(Odpowiedz.pytanie == p.id):
+            o.delete_instance()
+        p.delete_instance()
+        return redirect(url_for('lista'))
+            
+    return render_template("pytanie_usun.html", pytanie=p)
