@@ -1,0 +1,16 @@
+The rain in Spain falls mainly on the plain.LF 44 bajty
+The rain <3,3>Sp<9,3>falls m<11,3>ly on t<34,3>pl<15,3>.LF 34 bajty
+
+<x,y>
+34, 4
+6bitów, 2 = 8
+1-0-0-0-1-0
+
+Moją pasją są kompresje i ich komputerowe wersje. 52 bajty
+Moją pas<6,3>s<3,2>kompre<2,2>e i ich<16,5>uterow<18,2>wer<25,3>. 
+<25,5>
+
+5+3=8
+
+<18,2>
+10010+010
