@@ -8,5 +8,10 @@ ini_set('error_log', 'errorlog.txt');
 define('DINC', '/inc');
 require_once(DINC.'functions.php');
 //todo: zdefiniować id
+
+if (isset($_GET['id'])) $id=$_GET['id'];
+else $id='witam';
+
+
 include_once(DINC.'template.php');
 ?>

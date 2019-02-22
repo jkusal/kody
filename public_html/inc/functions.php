@@ -20,6 +20,6 @@ function get_page_content($id) {
     if (file_exists($id.'.html'))
         include($id.'.html');
     else
-        echo '<p>Brak takiej strony!</p>'
+        echo '<p>Brak takiej strony!</p>';
 }
 ?>
