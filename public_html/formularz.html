@@ -1,0 +1,43 @@
+<p>Wypełnij formularz</p>
+<?php
+    print_r($_GET);
+    print "<br>";
+    
+    if (isset($_POST['login'])) {
+        print_r($_POST);
+        foreach ($_POST as $k => $v) {
+            ${$k} = clrtxt($v); 
+        }
+        print $login."<br>";
+        print $haslo."<br>";
+        print $email."<br>";
+        
+        $qstr='SELECT id FROM users WHERE login=\''.$login.'\' LIMIT 1';
+        if (db_query($qstr)) {
+            echo '<p class="alert-warning">Podany login istnieje!</p>';
+            return;
+        }
+        $qstr='SELECT id FROM users WHERE email=\''.$email.'\' LIMIT 1';
+        if (db_query($qstr)) {
+            echo '<p class="alert-warning">Podany email istnieje!</p>';
+            return;
+        }
+    }
+?>
+<form action="?id=<?php echo $id; ?>" method="POST">
+    <div class="form-group">
+        <label for="login">Login:</label>
+        <input type="text" name="login" id="login" maxlength="20" required>
+    </div>
+    <div class="form-group">
+        <label for="haslo">Hasło:</label>
+        <input type="password" name="haslo" id="haslo" maxlength="20" required>
+    </div>
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" maxlength="30" required>
+    </div>
+    
+    <input type="submit" name="zapisz" value="Zapisz" class="btn btn-primary">
+</form>
+

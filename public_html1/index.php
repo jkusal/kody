@@ -5,7 +5,6 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 ini_set('log_errors', 1);
 ini_set('error_log', 'errorlog.txt');
-
 define('DINC', 'inc/');
 define('DBASE', 'baza/');
 $dbfile='db.sqlite3';
@@ -13,16 +12,13 @@ $db=null;
 require_once(DINC.'functions.php');
 require_once(DINC.'db.php');
 $kom=array();
-
 init_baza(DBASE.$dbfile);
-#db_exec($qstr);
+db_exec($qstr);
+//todo: zdefiniować id
 
-require_once(DINC.'users.php');
-$user = new User();
+if (isset($_GET['id'])) $id=$_GET['id'];
+else $id='witam';
 
-if (isset($_GET['id'])) $id=$_GET['id']; else $id='witam';
 
 include_once(DINC.'template.php');
-#print_r($_SERVER);
-print_r($_SESSION);
 ?>
