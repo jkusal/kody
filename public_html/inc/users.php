@@ -12,6 +12,7 @@ class User {
     var $remCookieName = 'sqlDB';
     var $keys = array('uid', 'login', 'haslo', 'email', 'datad');
     var $dane = array();
+    var $kom = array();
     
     function __construct() {
         $this->remCookieDomain = $this->remCookieDomain == '' ? $_SERVER['HTTP_HOST'] : $this->remCookieDomain;
@@ -23,6 +24,23 @@ class User {
             $this->login($u['login'], $u['haslo'], false, true);
         }
     }
+    
+    
+    
+    function login($login, $haslo, $remember=false, $loadUser=true) {
+		$login = rescape($login);
+		$haslo = rescape($haslo);
+		if ($loadUser && $this->is_user('',$login,$haslo)) {
+			if ($remember) { // zapisanie ciasteczka
+			  $cookie = base64_encode(serialize(array('login'=>$login,'haslo'=>$haslo,'czas'=>time())));
+			  $a = setcookie($this->remCookieName,$cookie,time()+$this->remTime,'/',$this->remCookieDomain,false,true);
+			}
+			$this->kom[]='Witaj '.$login.'! Zostałeś zalogowany.';
+			return true;
+		}
+		$this->kom[]='<b>Błędny login lub hasło!</b>';
+		return false;
+}
     
     function is_user($sid,$login=NULL,$haslo=NULL) {
 		if (!empty($login)) {
