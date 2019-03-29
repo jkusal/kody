@@ -46,17 +46,30 @@ function db_query($qstr,&$ret=null) {
 	if (empty($ret)) return false;
 	return true;
 	}
-    
+
 $qstr="BEGIN;
     CREATE TABLE users (
         id INTEGER PRIMARY KEY NOT NULL,
         login CHAR(20) UNIQUE NOT NULL,
         haslo CHAR(50) NOT NULL,
         email CHAR(50) UNIQUE NOT NULL,
-        datad INT NOT NULL,
+        datad INT NOT NULL
     );
-    INSERT INTO users VALUES (NULL, 'admin', '".sha1('haslo')."', 'admin@home.net', ".time().");
-    COMMIT;
+    INSERT INTO users VALUES (NULL,'admin','".sha1('haslo')."', 'admin@home.net',".time().");
+
+    CREATE TABLE klasy (
+        nazwa CHAR(20) UNIQUE NOT NULL,
+        rok_naboru INT NOT NULL,
+        rok_matury INT NOT NULL
+    );
+
+    CREATE TABLE uczniowie (
+        imie CHAR(20) NOT NULL,
+        nazwisko CHAR(50) NOT NULL,
+        plec INT NOT NULL,
+        FOREIGN KEY (klasa) REFERENCES klasy(nazwa)
+    );
+COMMIT;
 ";
 
 ?>

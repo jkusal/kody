@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pl">
-
   <head>
 
     <meta charset="utf-8">
@@ -8,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title><?php echo $tytul; ?></title>
+    <title><?php get_page_title($id); ?></title>
 
     <!-- Bootstrap core CSS -->
     <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -40,8 +39,8 @@
 
     <header class="bg-primary text-white">
       <div class="container text-center">
-        <h1>Aplikacja PHP</h1>
-        <p class="lead">Moja pierwsza aplikacja we PHP</p>
+        <h1>Alikacja PHP</h1>
+        <p class="lead">Moja pierwsza aplikacja w PHP</p>
       </div>
     </header>
 
@@ -51,6 +50,7 @@
           <div class="col-lg-8 mx-auto">
             <?php
                 get_koms();
+                $user->get_koms();
                 get_page_content($id);
             ?>
           </div>
@@ -74,7 +74,7 @@
     <script src="static/vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom JavaScript for this theme -->
-    <script src="static/js/scrolling-nav.js"></script>
+    <script src="js/scrolling-nav.js"></script>
 
   </body>
 

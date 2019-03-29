@@ -1,43 +1,50 @@
-<p>Wypełnij formularz</p>
+<p>Wypełnij formularz:</p>
 <?php
-    print_r($_GET);
-    print "<br>";
-    
     if (isset($_POST['login'])) {
-        print_r($_POST);
-        foreach ($_POST as $k => $v) {
-            ${$k} = clrtxt($v); 
+      global $user;
+      foreach ($_POST as $k => $v) {
+        ${$k} = clrtxt($v);
+      }
+      print $login."<br>";
+      print $haslo."<br>";
+      print $email."<br>";
+
+      $ok = true;
+      if ($user->is_login($login)) {
+        echo '<p class="alert-warning">Podany login istnieje!</p>';
+        $ok = false;
+      }
+      if ($user->is_email($email)) {
+        echo '<p class="alert-warning">Podany email istnieje!</p>';
+        $ok = false;
+      }
+      if ($ok) {
+        $user->login = $login;
+        $user->haslo = $haslo;
+        $user->email = $email;
+        if ($user->savtb()) {
+          echo '<p class="text-info">Utworzono konto!</p>';
+          $user->login($login, $haslo, true);
         }
-        print $login."<br>";
-        print $haslo."<br>";
-        print $email."<br>";
-        
-        $qstr='SELECT id FROM users WHERE login=\''.$login.'\' LIMIT 1';
-        if (db_query($qstr)) {
-            echo '<p class="alert-warning">Podany login istnieje!</p>';
-            return;
-        }
-        $qstr='SELECT id FROM users WHERE email=\''.$email.'\' LIMIT 1';
-        if (db_query($qstr)) {
-            echo '<p class="alert-warning">Podany email istnieje!</p>';
-            return;
-        }
-    }
+      }
+    } else {
 ?>
 <form action="?id=<?php echo $id; ?>" method="POST">
-    <div class="form-group">
-        <label for="login">Login:</label>
-        <input type="text" name="login" id="login" maxlength="20" required>
-    </div>
-    <div class="form-group">
-        <label for="haslo">Hasło:</label>
-        <input type="password" name="haslo" id="haslo" maxlength="20" required>
-    </div>
-    <div class="form-group">
-        <label for="email">Email:</label>
-        <input type="email" name="email" id="email" maxlength="30" required>
-    </div>
-    
-    <input type="submit" name="zapisz" value="Zapisz" class="btn btn-primary">
-</form>
+  <div class="form-group">
+    <label for="login">Login:</label>
+    <input type="text" name="login" id="login" maxlength="20" required>
+  </div>
+  <div class="form-group">
+    <label for="haslo">Hasło:</label>
+    <input type="password" name="haslo" id="password" maxlength="20" required>
+  </div>
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email" maxlength="30" required>
+  </div>
 
+  <input type="submit" name="zapisz" value="Zapisz" class="btn btn-primary">
+</form>
+<?php
+  }
+?>
