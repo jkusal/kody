@@ -3,7 +3,9 @@
 $pages = array(
     'witam' => 'Witamy',
     'baza' => 'Baza',
-    'formularz' => 'Formularz'
+    'formularz' => 'Formularz',
+    'klasy' => 'Klasy',
+    'uczniowie' => 'Uczniowie'
 );
 
 function get_page_title($id) {

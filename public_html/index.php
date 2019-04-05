@@ -15,7 +15,7 @@ require_once(DINC.'db.php');
 $kom=array();
 
 init_baza(DBASE.$dbfile);
-# db_exec($qstr);
+init_tables();
 
 require_once(DINC.'users.php');
 $user = new User(); // tworzenie obiektu użytkownika
