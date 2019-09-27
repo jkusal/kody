@@ -1,0 +1,37 @@
+id	Kraj
+1	Stany Zjednoczone
+2	Wlochy
+3	Polska
+4	Niemcy
+5	Kanada
+6	Ukraina
+7	Belgia
+8	Peru
+9	Wielka Brytania
+10	Norwegia
+11	Argentyna
+12	Brazylia
+13	Austria
+14	Chorwacja
+15	Irlandia
+16	Francja
+17	Hiszpania
+18	Czechy
+19	Holandia
+20	Szwecja
+21	Algieria
+22	Rumunia
+23	Rosja
+24	Japonia
+25	Serbia
+26	Wegry
+27	Turcja
+28	Finlandia
+29	Meksyk
+30	Grecja
+31	Slowenia
+32	Portugalia
+33	Lotwa
+34	Armenia
+35	Izrael
+36	Dania
